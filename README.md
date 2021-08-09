@@ -2,8 +2,6 @@
 
 ## 心跳心跳煞笔部
 
-----
-
 欢迎来到DDSB的开源项目，本工程使用Ren'Py制作，基于[DokiMod](https://revolution.dokimod.cn/)，使用前请详细阅读该项目的[GPL 3.0](https://github.com/sout233/DDSB/blob/main/LICENSE)协议。
 
 本项目仅为DDLC的爱好者作品，与[Team Salvato](http://teamsalvato.com/)无关。
