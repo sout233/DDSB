@@ -13,9 +13,9 @@
 如遇到问题，请提交issues。
 
 
-# 编译与调试
+## 编译与调试
 
-## 准备工作
+### 准备工作
 
 1.首先，下载并配置[Python](https://www.python.org/)环境。
 
@@ -27,13 +27,23 @@
 
 3.在Ren'Py根目录中新建一个名为"DDSB"的文件夹，然后clone该项目并解压到DDSB文件夹中。
 
-4.启动renpy.exe，选中DDSB工程并单击**Launch Project**，你应该能看到工程正常的启动。
+4.因为版权和GitHub限制问题，你需要额外下载补充包（链接见下方），并将其解压进`Ren'Py根目录\DDSB\game\`内
+
+>[OneDrive](https://1drv.ms/u/s!AuVe_GpP6ZchlQ_oUvj8rt1okK7O?e=Gy6YeY)(建议）
+
+>[百毒网盘](https://pan.baidu.com/s/1K12iMDH0Vy_yiluQAI53Fw)(取件码：5r4r)
+
+5.启动renpy.exe，选中DDSB工程并单击**Launch Project**，你应该能看到工程正常的启动。
 
 >你可以在Ren'py的**选项（preferences）**中将语言修改为**简体中文（Simplified Chinese）**
 
-5.**大功告成！**
+6.**大功告成！**
 
-# 注意事项
+## 日志
+
+~~准备迫害纱世里~~
+
+## 注意事项
 
 该工程里的字体并不符合规范，为了注重版权问题，我建议你浏览[DokiMod中文字体相关](https://dokimod.cn/moddev/font.html#%E5%8D%8E%E4%B8%BA-harmonyos-sans)。
 
