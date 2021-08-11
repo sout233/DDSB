@@ -9,7 +9,7 @@
 # 这里可以为你的 Mod 命名。
 # 把 "DDLC 中文 Mod 模板" 改成你的 Mod 名字（比如 "我永远喜欢 Sayori"）
 ## 带有 _() 的字符串表示其可被翻译。
-define config.name = "DDLC 中文 Mod 模板"
+define config.name = "DDSB 心跳心跳煞笔部 1.0-alpha1"
 
 # 这里可以控制是否在游戏主菜单展示 Mod 名字及版本号。
 # 一般情况下可以打开以与原游戏区分，但如果 Mod 名字太长，建议改为 False
@@ -17,16 +17,16 @@ define gui.show_name = True
 
 # 这里可以输入版本号。如果你的 Mod 版本很多，那这时版本号会很有用。
 # 如果你刚刚开始，那么建议把版本号设为 "1.0"
-define config.version = "2.0.0-beta1"
+define config.version = "1.0-alpha1"
 
 # 这里是在“关于”页显示的 Mod 介绍文字。
 # 由于我们重新启用了关于界面，你可以在这里写点介绍。
-define gui.about = _("""这里是写简介的地方。在 options.rpy 里写上你的 Mod 简介吧！""")
+define gui.about = _("""心跳心跳煞笔部！DDSB内测版本！""")
 
 # 这是 Ren'Py SDK 会读取的构建名。
 # 构建名只能使用 ASCII 字符，因此只能使用英文字母，不能有空格、数字、下划线。
 # 例：Sayori Is The Best → SayoriIsTheBest
-define build.name = "DDLCModTempCNNext"
+define build.name = "DDSB"
 
 # 控制设置菜单中的音量设置显示
 # 音效，建议保留为 True
