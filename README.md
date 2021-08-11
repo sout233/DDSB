@@ -1,6 +1,6 @@
 # Doki Doki SB (Club)
 
-## 心跳心跳煞笔部
+## 心跳心跳煞笔（心停祖安煞笔部）
 
 欢迎来到DDSB的开源项目，本工程使用Ren'Py制作，基于[DokiMod](https://revolution.dokimod.cn/)，使用前请详细阅读该项目的[GPL 3.0](https://github.com/sout233/DDSB/blob/main/LICENSE)协议。
 
