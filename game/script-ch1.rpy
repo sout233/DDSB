@@ -313,6 +313,29 @@ menu:
         "……"
         s ""
         return
+    "不是":
+        mc "不是。"
+        s "那好吧…"
+        s ""
+        s ""
+        s ""
+        s "快走"
+        s ""
+menu:
+    "走":
+        s ""
+        ""
+        mc "纱ÅÆÇ…"
+        "我离开了纱世里的家"
+        scene bg house
+        "……"
+        show dark:
+            alpha 0.6
+        "……"
+        pause 3.0
+        show sayori glitch
+        pause 1.0
+        return
 
 
 label not_sayori_line:
