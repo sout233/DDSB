@@ -11,7 +11,7 @@ define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
 
 # 开发者模式开关
-define config.developer = False
+define config.developer = "auto"
 
 python early:
     import singleton
@@ -137,7 +137,7 @@ define audio.td = "<loop 36.782>bgm/d.ogg" # Sayo-nara 晴 天 娃 娃
 define audio.td2 = "<from 4.5 loop 36.782>bgm/d.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg" # Just Monika - Just Monika.
-define audio.mend = "<loop 6.424>bgm/monika-end.ogg" # I Still Love You - 你个死直娘贼，居然刀了 Monika，哼唧（（（
+define audio.mend = "<loop 6.424>bgm/monika-end.ogg" # I Still Love You
 
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
 define audio.g1 = "<loop 0>bgm/g1.ogg"
@@ -164,6 +164,11 @@ image end:
     "gui/end.png"
 image bg residential_day = "bg/residential.png" # 梦开始的地方 - 你的家门口
 image bg class_day = "bg/class.png" # 教室
+# sout自定义区域
+image bg music_room = "mod_assets/images/bg/music-room"
+image bg music_room_darkthing = "mod_assets/images/bg/music_room_darkthing.png"
+image bg vendingmachine = "mod_assets/images/bg/vendingmachine.png"
+######
 image bg corridor = "bg/corridor.png" # 走廊
 image bg club_day = "bg/club.png" # 文学部
 image bg club_day2: # 晴天娃娃特别版，1/6 概率
@@ -1367,9 +1372,29 @@ define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suff
 define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define y = DynamicCharacter('y_name', image='yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define ny = Character('夏树 & 优里', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
+# Allows the player to dismiss or not based off config.developer
 define _dismiss_pause = config.developer
+
+# [BETA] Pronoun Variables
+## This section adds the feature to use player pronouns within the game text easily.
+## To use this feature, simply ask the user for their pronoun and use it here.
+## For capitalization, use heC, himC, areC and hesC
+default persistent.he = ""
+default persistent.him = ""
+default persistent.are = ""
+default persistent.hes = ""
+default persistent.he_chs = "" 
+default he = persistent.he
+default him = persistent.him
+default are = persistent.are
+default hes = persistent.hes
+default he_chs = persistent.he_chs
+default heC = persistent.he.capitalize()
+default himC = persistent.him.capitalize()
+default areC = persistent.are.capitalize()
+default hesC = persistent.hes.capitalize()
 
 define gui.system_font = u'mod_assets/font/harmonyossans.ttf'
 
@@ -1412,10 +1437,10 @@ default faint_effect = None
 # Default Name Variables
 ## To define a default name do so like this
 # default e_name = "Eileen"
-default s_name = "Sayori"
-default m_name = "Monika"
-default n_name = "Natsuki"
-default y_name = "Yuri"
+default s_name = "纱世里"
+default m_name = "莫妮卡"
+default n_name = "夏树"
+default y_name = "优里"
 
 # Poem Variables
 # This is how much each character likes your poem day by day
