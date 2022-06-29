@@ -27,11 +27,15 @@
 
 3.在Ren'Py根目录中新建一个名为"DDSB"的文件夹，然后clone该项目并解压到DDSB文件夹中。
 
-4.因为版权和GitHub限制问题，你需要额外下载补充包（链接见下方），并将其解压进`Ren'Py根目录\DDSB\game\`内
+4.目前新版已无需额外下载补充包，若仓库过大下不动则可以尝试使用steam++加速
 
->[OneDrive](https://1drv.ms/u/s!AuVe_GpP6ZchlQ_oUvj8rt1okK7O?e=Gy6YeY)(建议）
+<!--
+~~4.因为版权和GitHub限制问题，你需要额外下载补充包（链接见下方），并将其解压进`Ren'Py根目录\DDSB\game\`内~~
 
->[百毒网盘](https://pan.baidu.com/s/1K12iMDH0Vy_yiluQAI53Fw)(取件码：5r4r)
+~~>[OneDrive](https://1drv.ms/u/s!AuVe_GpP6ZchlQ_oUvj8rt1okK7O?e=Gy6YeY)(建议）~~
+
+~~>[百毒网盘](https://pan.baidu.com/s/1K12iMDH0Vy_yiluQAI53Fw)(取件码：5r4r)~~
+-->
 
 5.启动renpy.exe，选中DDSB工程并单击**Launch Project**，你应该能看到工程正常的启动。
 
@@ -42,6 +46,8 @@
 ## 日志
 
 ~~准备迫害纱世里~~
+
+~~纱世理竟然是NTR？~~
 
 ## 注意事项
 
