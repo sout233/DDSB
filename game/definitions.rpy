@@ -165,7 +165,7 @@ image end:
 image bg residential_day = "bg/residential.png" # 梦开始的地方 - 你的家门口
 image bg class_day = "bg/class.png" # 教室
 # sout自定义区域
-image bg music_room = "mod_assets/images/bg/music-room"
+image bg music_room = "mod_assets/images/bg/music-room.png"
 image bg music_room_darkthing = "mod_assets/images/bg/music_room_darkthing.png"
 image bg vendingmachine = "mod_assets/images/bg/vendingmachine.png"
 ######
@@ -284,7 +284,7 @@ image glitch_color2:
 # image sayori 1ca = im.Composite((960, 960), (0, 0), "mod_assets/sayori/1cl.png", (0, 0), "mod_assets/sayori/1cr.png", (0, 0), "sayori/a.png")
 
 # Sayori's Definitions
-image sayori 1 = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/a.png")
+image sayori 1 = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/images/bg/fu.png")
 image sayori 1a = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/a.png")
 image sayori 1b = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/b.png")
 image sayori 1c = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/c.png")

@@ -394,7 +394,7 @@ screen quick_menu():
 
             #textbutton _("Back") action Rollback()
             textbutton _("历史") action ShowMenu('history')
-            textbutton _("跳过") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("自动") action Preference("auto-forward", "toggle")
             textbutton _("存档") action ShowMenu('save')
             textbutton _("读档") action ShowMenu('load')
@@ -482,7 +482,7 @@ screen navigation():
             if renpy.variant("pc"):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("帮助") action [Help("help.html"), Show(screen="dialog", message="帮助文档已在浏览器打开。", ok_action=Hide("dialog"))]
+                textbutton _("帮助") action [Help("help.html"), Show(screen="dialog", message="帮助文档已在浏览器中打开。", ok_action=Hide("dialog"))]
 
                 ## The quit button is banned on iOS and unnecessary on Android.
                 textbutton _("退出") action Quit(confirm=not main_menu)
@@ -561,7 +561,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text "v[config.version]":
                 style "main_menu_version"
 
     key "K_ESCAPE" action Quit(confirm=False)
@@ -805,10 +805,10 @@ screen load():
 init python:
     def FileActionMod(name, page=None, **kwargs):
         if persistent.playthrough == 1 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
-            return Show(screen="dialog", message="File error: \"characters/sayori.chr\"\n\nThe file is missing or corrupt.",
-                ok_action=Show(screen="dialog", message="The save file is corrupt. Starting a new game.", ok_action=Function(renpy.full_restart, label="start")))
+            return Show(screen="dialog", message="文件错误：\"characters/sayori.chr\"\n\n文件已丢失或损坏。",
+                ok_action=Show(screen="dialog", message="存档已经损坏，正在重新开始游戏。", ok_action=Function(renpy.full_restart, label="start")))
         elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
+            return Show(screen="dialog", message="没有存档的必要了。\n别担心，我哪都不会去的。", ok_action=Hide("dialog"))
         else:
             return FileAction(name)
 
@@ -968,8 +968,8 @@ screen preferences():
 
                 vbox:
                     style_prefix "check"
-                    label _("跳过设置")
-                    textbutton _("未浏览过的内容") action Preference("skip", "toggle")
+                    label _("快进设置")
+                    textbutton _("未读内容") action Preference("skip", "toggle")
                     textbutton _("选择选项之后") action Preference("after choices", "toggle")
                     #textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
@@ -1123,7 +1123,7 @@ screen history():
     tag menu
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
+    use game_menu(_("历史"), scroll=("vpgrid" if gui.history_height else "viewport")):
         style_prefix "history"
         for h in _history_list:
             window:
@@ -1138,7 +1138,7 @@ screen history():
                 text what:
                     substitute False
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _("这里没有对话历史记录。")
             
 python early:
     import renpy.text.textsupport as textsupport
@@ -1536,7 +1536,7 @@ screen skip_indicator():
         hbox:
             spacing 6
 
-            text _("正在跳过")
+            text _("正在快进")
 
             text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"

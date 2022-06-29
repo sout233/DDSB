@@ -39,6 +39,7 @@ label start:
     # 脚本开始
     call ch1_start
     call ch2_start
+    #call endgame
 
     return
 

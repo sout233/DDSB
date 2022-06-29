@@ -12,7 +12,6 @@ label ch1_start:
         except: renpy.jump("ch0_kill")
 
     $ restore_all_characters()
-
     s "等等我！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！"
     mc "？"
     mc "你吼那么大声干嘛啊"
@@ -25,7 +24,6 @@ label ch1_start:
     "相处时间久了，自然就会这样。"
     "虽然她着急忙慌跑过来的亚子搞得我尬死了"
     "但我还是停了下来……"
-    #$ s_name = '福'
     show sayori 4p zorder 2 at t11
     s "哈...哈..."
     mc "你再睡下去咱俩估计就得挨批了"
@@ -38,16 +36,6 @@ label ch1_start:
     s "嗯……"
     mc "？？？"
     s "……"
-
-    #show sayori 1 zorder 2 at h11
-    #s "欢天"
-    #show sayori 1 zorder 2 at h11
-    #s "喜地"
-    #show sayori 1 zorder 2 at h11
-    #s "过"
-    #show sayori 1 zorder 2 at h11
-    #s "大年！"
-
     mc "你踏马有话快说。"
     s "嘤嘤嘤（"
     s "我说出来你别打我哈。"
@@ -142,7 +130,6 @@ label thenwhat_line:
     s "太逊了，啧啧啧。"
     s "那就这么说定了，放学你来我家。"
     mc "好好好，快去教室。"
-    show sayori at lhide
     hide sayori
     "纱世里一溜烟的跑走了。"
     "我一边生怕她会摔倒，一边一步步挪到了教室门口。"
@@ -154,7 +141,7 @@ label dua_line:
     show sayori 5h
     s "当然你想登dua郎也不是不行……"
     mc "？"
-    s 2e "nmd，你没听见好吧。"
+    s 2e "你妈的，你没听见好吧。"
     mc "那我没听见就没听见吧。"
     show sayori 1b
     s "嘁，那就这么说定了啊。"
@@ -480,7 +467,7 @@ label sy_wentmcroom_line:
     s "手机给你。"
     show sayori 4r at h11
     s "加油！"
-    call poem from _call_poem
+    call poem
     scene bg bedroom
     with dissolve
     show sayori 1a zorder 2 at t11
@@ -524,8 +511,8 @@ label sy_wentmcroom_line:
     mc "NMLGB"
     mc "我感觉我班里的同学又开始议论纷纷了。"
     s 1b "议论什么？"
-    mc "就那些\'磕学家\'，貌似在磕我们的cp"
-    s 3b "所以…为什么？"
+    mc "就那些\"磕学家\"，貌似在磕我们的cp"
+    s 2b "所以…为什么？"
     mc "我哪知道她们…"
     s 1a "噗，那不是挺好玩的吗。"
     mc "等你真听见了就不会觉得好玩了。"

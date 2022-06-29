@@ -298,7 +298,7 @@ label splashscreen:
     default persistent.lockdown_warning = False
 
     if not persistent.lockdown_warning:
-        call lockdown_check from _call_lockdown_check
+        call lockdown_check
 
     # Sets First Run to False to Show Disclaimer
     default persistent.first_run = False
