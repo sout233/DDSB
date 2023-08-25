@@ -1,124 +1,114 @@
-﻿# Options.rpy
-## This template version is 2.4.6. When asked to provide the template version you are using,
-## give them this version number. DO NOT REMOVE OR CHANGE THIS COMMENT.
-   
-## 目前中文 Mod 模板的版本为 2.0.0-dev，基于原版改良模板的 2.4.6 版本改造。
-## 如果你需要向别人提及模板版本，建议把这两个都放上去。
-## 不要修改、删除这段注释，包括上面的英文原版。
+﻿## This template version is 4.1.0. When asked to provide the template version
+## you are using, give them this version number. 
+### DO NOT REMOVE OR CHANGE THE ABOVE COMMENT. ###
+
+## options.rpy
+# This file customizes what your mod is and and how it starts and builds!
 
 # 这里可以为你的 Mod 命名。
-# 把 "DDLC 中文 Mod 模板" 改成你的 Mod 名字（比如 "我永远喜欢 Sayori"）
-## 带有 _() 的字符串表示其可被翻译。
-define config.name = "DDSB 心跳心跳煞笔部 1.0-alpha1"
+define config.name = "DDLC 中文 Mod 模板 4.0"
 
-# 这里可以控制是否在游戏主菜单展示 Mod 名字及版本号。
-# 一般情况下可以打开以与原游戏区分，但如果 Mod 名字太长，建议改为 False
+# 该选项控制是否在游戏主菜单展示 Mod 名字及版本号。
+# 如果 Mod 名字太长，建议禁用此选项。
 define gui.show_name = True
 
-# 这里可以输入版本号。如果你的 Mod 版本很多，那这时版本号会很有用。
-# 如果你刚刚开始，那么建议把版本号设为 "1.0"
-define config.version = "1.0-alpha1"
+# 该选项代表模组的版本号。
+define config.version = "4.2.0–zh-py3-patch1"
+
+# 该选项代表 Mod 模板的版本号。**请勿修改**
+define template.version = "4.2.0–zh-py3-patch1"
 
 # 这里是在“关于”页显示的 Mod 介绍文字。
-# 由于我们重新启用了关于界面，你可以在这里写点介绍。
-define gui.about = _("""心跳心跳煞笔部！DDSB内测版本！""")
+# 您可以在这里写点 Mod 的简介，默认情况下它将出现在“额外功能”的“关于”界面。
+define gui.about = _("")
 
-# 这是 Ren'Py SDK 会读取的构建名。
-# 构建名只能使用 ASCII 字符，因此只能使用英文字母，不能有空格、数字、下划线。
-# 例：Sayori Is The Best → SayoriIsTheBest
-define build.name = "DDSB"
+# This control the name of your mod build when you package your mod
+# in the Ren'Py Launcher or DDMM (Doki Doki Mod Maker).
+# Note:
+#   The build name is ASCII only so no numbers, spaces, or semicolons.
+#   Example: Doki Doki Yuri Time to DokiDokiYuriTime
+define build.name = "DDLCModTemplateZh-Future"
 
-# 控制设置菜单中的音量设置显示
-# 音效，建议保留为 True
+# 该选项控制 Mod 是否包含音效。
 define config.has_sound = True
 
-# 背景音乐，建议保留为 True
+# 该选项控制 Mod 是否包含背景音乐。
 define config.has_music = True
 
-# 语音，如果 Mod 有语音则为 True，否则为 False
+# 该选项控制 Mod 是否包含角色语音。
 define config.has_voice = False
 
-# 这里控制主菜单的背景音乐。
-# audio.t1 是 Doki Doki Literature Club 的主菜单音乐。
-# 如果你想修改，那么把 "t1" 改成其他已定义的 BGM。
+# This configures what music will play when you launch your mod and in the 
+# main menu.
 define config.main_menu_music = audio.t1
 
-# 这是进入和退出游戏菜单时使用的转场。
-# Dissolve(.2) 相当于转场特效。
-# config.enter_transition 控制进入游戏菜单时使用的转场。
-# config.exit_transition 控制退出游戏菜单 / 返回游戏时使用的转场。
+# These variables control the transition effects of DDLC when entering and exiting
+# a menu.
+#   config.enter_transition controls the effect seen when entering the game menu.
+#   config.exit_transition controls the effect when returning to the game.
+#   Dissolve(X) dissolves the menu or last screen by X seconds.
 define config.enter_transition = Dissolve(.2)
 define config.exit_transition = Dissolve(.2)
 
-# 这是加载存档后显示的转场。
-# 默认情况下为 None，你可以自定义转场，但如果不确定，请保留为 None。
+# This controls the transition effect of DDLC after loading the game.
 define config.after_load_transition = None
 
-# 这是在故事结束后显示的转场。
-# Dissolve(.2) sets the transition effect you see.
+# This controls the transition effect when your mod has reached the end of its' story.
 define config.end_game_transition = Dissolve(.5)
 
 # This controls the textbox that the characters use to speak.
-# "auto" sets the textbox to hide during scenes and show when a character speaks
-# "show" sets the textbox to show at all times
-# "hide" only shows dialogue when a character speaks.
+#   "auto" sets the textbox to hide during scenes and show when a character speaks
+#   "show" sets the textbox to show at all times
+#   "hide" only shows dialogue when a character speaks.
 define config.window = "auto"
 
 # This controls the transition effects of the textbox.
-# Dissolve(.2) sets the transition effect you see.
-# config.window_show_transition controls the effect when the textbox is shown.
-# config.window_hide_transition controls the effect when the textbox is hidden.
+#   config.window_show_transition controls the effect when the textbox is shown.
+#   config.window_hide_transition controls the effect when the textbox is hidden.
+#   Dissolve(X) dissolves the menu or last screen by X seconds.
 define config.window_show_transition = Dissolve(.2)
 define config.window_hide_transition = Dissolve(.2)
 
-# 这里可以控制 Mod 默认的文字展示速度。
-# By default this is set to 50. 
-# Increasing this number will speed up text while decreasing the number slows down text speed.
-# 0 is instant text display.
+# This sets the text speed of your mod.
 default preferences.text_cps = 50
 
-# This controls the auto-forward speed
-# 15 is DDLC's default speed.
-# You can change it from 0-30
+# This controls the auto-text forward speed of your mod.
 default preferences.afm_time = 15
 
 # This controls the audio level of your mod.
-# Increasing this will make the music louder while decreasing will make it quieter.
-# SFX controls the sound effects volume.
 default preferences.music_volume = 0.75
 default preferences.sfx_volume = 0.75
 
-# This controls the save directory of your mod.
-# Change "DDLCModTemplate2" to your mod's name
-# Windows Directory for Saves: %AppData%/RenPy/
-# macOS Directory for Saves: $HOME/Library/RenPy/ (Un-hide the Library Folder)
-# Linux Directory for Saves $HOME/.renpy/
-define config.save_directory = "DDLCModTemplateTwo"
+# This controls the save folder name of your mod.
+# Finding your Saves:
+#   Windows: %AppData%/RenPy/
+#   macOS: $HOME/Library/RenPy/ (Un-hide the Library Folder)
+#   Linux: $HOME/.renpy/
+define config.save_directory = "DDLCModTemplateZh-v4"
 
 # This controls the window logo of your mod.
-# By default this defaults to the DDLC Icon PNG.
 define config.window_icon = "gui/window_icon.png"
 
-# This controls whether your mod allows skipping dialogue.
+# This controls whether your mod allows the player to skip dialogue.
 define config.allow_skipping = True
 
 # This controls whether your mod saves automatically.
 define config.has_autosave = False
 
-# This controls whether you mod saves when quitting the game.
+# This controls whether you mod saves automatically when quitting the game.
 define config.autosave_on_quit = False
 
-# This controls the number of slots auto-saving can use
+# This controls the number of slots auto-save can use for saving the game.
 define config.autosave_slots = 0
 
-# This controls the layers of screens, images, and more. 
-# Best not to leave this alone.
-define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'front' ]
+# This controls whether the player can rollback to the previous dialogue in-game.
+define config.rollback_enabled = config.developer
 
-# 最好也不要动这一块。
+# These variables controls the layers placement of screens, images, and more. 
+# It is highly recommended to leave these variables alone.
+define config.layers = [ 'master', 'transient', 'screens', 'overlay', 'front' ]
 define config.image_cache_size = 64
 define config.predict_statements = 50
-define config.rollback_enabled = config.developer
 define config.menu_clear_layers = ["front"]
 define config.gl_test_image = "white"
 
@@ -142,59 +132,63 @@ init python:
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
 
-## Build configuration #########################################################
+## 构建配置 ####################################################################
 ##
-## This section controls how Ren'Py turns your project into distribution files.
+## 此部分控制 Ren'Py 如何将您的项目转变为发行版文件。
 
 init python:
+    ## 以下函数接受文件模式。文件模式不区分大小写，并与基础目录的相对路径相匹
+    ## 配，包括或不包括 /。如果多个模式匹配，则使用第一个模式。
+    ##
+    ## 在一个模式中：
+    ## * 匹配所有字符，目录分隔符除外。
+    ## ** 匹配所有字符，包括目录分隔符。
+    ##
+    ## 例如：
+    ## “*.txt”匹配基础目录中的 txt 文件。
+    ## “game/**.ogg”匹配游戏目录或任何子目录中的 ogg 文件。
+    ## “**.psd”匹配项目中任何位置的 psd 文件。
 
-    ## The following functions take file patterns. File patterns are case-
-    ## insensitive, and matched against the path relative to the base directory,
-    ## with and without a leading /. If multiple patterns match, the first is
-    ## used.
-    ##
-    ## In a pattern:
-    ##
-    ## / is the directory separator.
-    ##
-    ## * matches all characters, except the directory separator.
-    ##
-    ## ** matches all characters, including the directory separator.
-    ##
-    ## For example, "*.txt" matches txt files in the base directory, "game/
-    ## **.ogg" matches ogg files in the game directory or any of its
-    ## subdirectories, and "**.psd" matches psd files anywhere in the project.
+    # These variables declare the packages to build your mod that is Team Salvato
+    # IPG compliant. Do not mess with these variables whatsoever.
+    build.package("Renpy8-DDLCMod", 'zip', 'windows linux mac renpy mod',
+        description="Ren'Py 8 DDLC Compliant Mod")
 
-    # Code to Package your mod to a ZIP in Ren'Py
-    build.package(build.directory_name + "Mod",'zip','mod',description="Ren'Py 6 DDLC Compliant Mod")
-    build.package(build.directory_name + "Renpy7Mod",'zip','windows mac linux renpy mod',description="Ren'Py 7 DDLC Compliant Mod")
-
+    # These variables declare the archives that will be made to your packaged mod.
+    # To add another archive, make a build.archive variable like in this example:
     build.archive("scripts", 'mod')
     build.archive("mod_assets", 'mod')
 
-    ## 不要动这里。
-    ## 这里可以让 Ren'Py 添加 Linux / macOS 的执行文件。
+    # Do not touch these lines. This is so Ren'Py can add your mods' py file
+    # and a special launcher for Linux and macOS to run your mod. 
+    try: 
+        build.renpy_patterns.remove(('renpy.py', ['all']))
+        build.classify_renpy("renpy.py", "renpy all")
+    except: pass
+    
     try:
-        build.renpy_patterns.remove((u'renpy.py', [u'all']))
-    except:
-        pass
-    build.classify_renpy("renpy.py", "renpy all")
+        build.early_base_patterns.remove(('*.sh', None))
+        build.classify("LinuxLauncher.sh", "linux") ## Linux Launcher Script
+        build.classify("*.sh", None)
+    except: pass
     
     #############################################################
-
-    # To classify packages for both pc and android, make sure to add all to it like so
-    # Example: build.classify("game/**.pdf", "scripts all")
-    
+    # These variables classify packages for PC and Android platforms.
+    # Make sure to add 'all' to your build.classify variable if you are planning
+    # to build your mod on Android like in this example.
+    #   Example: build.classify("game/**.pdf", "scripts all")
     build.classify("game/mod_assets/**", "mod_assets all")
-    build.classify("game/gui/**", "mod_assets all")
-    build.classify("game/images/**", "mod_assets all")
+    build.classify("game/gui/**", "mod_assets all") ## Native Ren'Py way support
+    build.classify("game/images/**", "mod_assets all") ## Native Ren'Py way support
+    build.classify("game/presplash.png", "scripts all")
     build.classify("game/**.rpyc", "scripts all")
-    build.classify("game/README.txt", None)
+    build.classify("game/README.md", None)
+    build.classify("game/**/README.md", None)
     build.classify("game/**.txt", "scripts all")
     build.classify("game/**.chr", "scripts all")
-    build.classify("game/advanced_scripts/**","scripts all")
+    build.classify("game/advanced_scripts/**","scripts all") ## Backwards Compatibility
     build.classify("game/tl/**", "scripts all") ## Translation Folder
-    build.classify("game/tutorial_route_answer/**", None)
+    build.classify("game/mod_extras/**.rpyc", "scripts") ## Extra Features
 
     build.classify('**~', None)
     build.classify('**.bak', None)
@@ -210,20 +204,10 @@ init python:
     build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa', None)
-    build.classify('help.html','mod all')
-    build.classify('attributions.txt','mod all')
-    build.classify('game/mod_assets/font/LICENSE-harmonyossans.txt','mod all')
+    build.classify('README.html','mod all')
+    build.classify('README.linux', 'linux')
 
-    # Set's help.html as documentation
-    build.documentation('help.html')
+    # This sets' README.html as documentation
+    build.documentation('README.html')
 
     build.include_old_themes = False
-
-    # # Advanced Addons
-    # # This section is for advanced build classifications to your mod that
-    # # can be added to your mod. Note DDLC runs as normal and doesn't require this.
-    # # This is either for compatibility issues or added features.
-
-    # # Doki Doki Mod Manager metadata file
-    # build.classify('ddmm-mod.json','mod')
-    # build.classify('ddmm-bg.png','mod')

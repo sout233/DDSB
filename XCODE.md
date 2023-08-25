@@ -1,10 +1,8 @@
-# Using DDLCModTemplate with Xcode
+#  Using DDLCModTemplate with Xcode
 
 ![DDLC Mod in Xcode](https://marquiskurt.net/images/covers/2019-06-09-cover.png)
 
-> 请注意！DDLC 中文 Mod 模板开发者目前无法测试模板在 Xcode 的发挥表现。
-
-本模板内置了 Xcode 构建 / 运行支持，您可以在这篇教程（英文）中了解更多：https://marquiskurt.net/2019/06/09/post.html.
+This template comes with Xcode build/run support as highlighted in this Ren'Py/Xcode tutorial: https://marquiskurt.net/2019/06/09/post.html.
 
 However, before running the project, there are a few things that *must* be configured to ensure that it runs properly.
 

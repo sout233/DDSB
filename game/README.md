@@ -1,72 +1,57 @@
-# Explanation of the RPY files 
-The '.rpy' files in the game folder are copies of important script files found in DDLC's `scripts.rpa` archive that are necessary to change for the most basic modding projects.
+# 内容
 
-### **cgs.rpy**
+### <u>act_two</u> - 二周目
 
-This file contains the defintions for the CGs in the original game to be called on when needed.
+This folder contains the files used in Act Two of the game. (Glitched Text, Special Poems, and the Console)
 
-### **console.rpy**
+### <u>chrs</u> - 角色文件
 
-This file contains the definitions and label calls needed to prompt Monika's "Python Console" from within the game.
+This folder contains the character files of the girls themselves.
 
-### **credits.rpy**
+### <u>core</u> - 核心
 
-This file contains the definitions, text and label calls needed to play the credits of the game when the game is finished.
+This folder contains the needed files for DDLC and the template to run. (Patches, Lockdown, Imports/Exceptions, and Credits)
 
-### **definitions.rpy**
+### <u>definitions</u> - 定义
 
-This file contains the definitions and python defines to define the character's images, the background, music, variables, and story python code to execute in the game when needed.
+This folder contains the definition files for images, sprites, music, etc. that are used in DDLC. (CGs, Definitions, Effects, Splash, Transforms)
 
-### **effects.rpy**
+### <u>mod_assets</u> - 模组资源
 
-This file contains the python classes, define, and definitions needed to show some different effects in the game like blood and such.
+This folder stores all your images, music/sfx, and more relating to your mod along with files needed for the Extras screen.
 
-### **gui.rpy**
+### <u>mod_extras</u> - 模组额外内容
 
-This file controls the definitions used for the main menu and game interface such as color, audio to be played at startup, positions of text and other inteface elements and more. This is also where the android interface code is located in to define the interface for mobile users.
+This folder contains the extra features in the template that is available for modders to use. (BSOD, Extras Screen, Gallery, Achievements, Pronouns)
 
-### **monika.chr**, **natsuki.chr**, **sayori.chr** & **yuri.chr**
+### <u>poem_game</u> - 诗词游戏
 
-These files are in the game directory so the game can re-add the characters files to the `characters` folder when the defines in `definitions.rpy` are called to restore them.
+This folder contains the files used for the poem minigame in DDLC.
 
-### **options.rpy**
+### <u>poem_responses</u> - 赏诗反应
 
-This file contains options that can be changed to customize your game. This file also includes the build options used when exporting your game for others to download.
+This folder contains the files used for the poem response minigame in DDLC.
 
-### **poems_special.rpy**
+### <u>python-packages</u> - Python 包
 
-This file defines the images and label calls needed to display the special poems that are prompted in Act 2 of the original game. Make sure if you add a new special poem to change line 361 to how many additional poems you added i.e. 2 new poems would make line 361 be `a = range(1,14)`.
+This folder stores third-party python modules that you can use in your mod and contains the modules necessary to run DDLC.
 
-### **poems.rpy**
+### <u>tl</u> - 界面翻译
 
-This file defines the Poem class and poems that are used in the poem sharing game in the original game and the labels to show the poem to the user.
+该文件夹包含 DDLC 中文 Mod 模板所需要的界面翻译文本。您也（应该）可以使用 Ren'Py 的原生翻译功能，将模组翻译为其他语言。
 
-### **poemwords.txt**
+### gui.rpy - 界面
 
-This text file contains all the poem words, and points that the character likes said word to determine who's exclusive scene you get in the next day.
+This file defines all the positions, colors, paths and more of DDLC's GUI interface.
 
-### **screens.rpy**
+### options.rpy - 选项
 
-This file controls the main menu and settings interface look for images, transforms, styles and such in the original game. This should be the file you look into if you want to customize your menu to be something different.
+This file defines information about your mod and contains the necessary code to build it that complies to Team Salvato's IPG.
 
-### **script-poemgame.rpy**
+### screens.rpy - 屏幕
 
-This is where the game runs all the code needed to play the poem game in the original game.
+This file declares all the screens and styles used in DDLC like the main menu, dialog windows, etc.
 
-### **script-poemresponses.rpy**
+### script.rpy - 脚本
 
-This is where the game runs all the code needed to play the poem sharing game in the original game. `script-poemresponses2.rpy` is mainly additional text for the game in Act 2 in response to your poems there and is located in `original_scripts`.
-
-### **script.rpy**
-
-This is used to call scripts and set defaults to the game on startup. It should not include any actual events or scripting; only logic and calling other labels. 
-**This is the place to start for building your mod.**
-
-### **splash.rpy**
-
-This splash screen is the first thing that DDLC will show the player. It also defines a lot of the behavior when first loading the game, such as checking for character files and 
-jumping to scenes currently in progress.
-
-### **transforms.rpy**
-
-This file defines the transfors and transition code used in the game to position characters, prepare a new scene with a transition effect and more.
+This file is the main script that Ren'Py calls upon to start your mod's story! 
