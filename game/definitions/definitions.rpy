@@ -425,6 +425,8 @@ image sayori 5a = im.Composite((960, 960), (0, 0), "sayori/3a.png")
 image sayori 5b = im.Composite((960, 960), (0, 0), "sayori/3b.png")
 image sayori 5c = im.Composite((960, 960), (0, 0), "sayori/3c.png")
 image sayori 5d = im.Composite((960, 960), (0, 0), "sayori/3d.png")
+# 自行定义
+image sayori 5e = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/3e.png")
 
 # Sayori in her Casual Outfit [Day 4]
 image sayori 1ba = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/a.png")

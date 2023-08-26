@@ -6,21 +6,21 @@
 # This file customizes what your mod is and and how it starts and builds!
 
 # 这里可以为你的 Mod 命名。
-define config.name = "DDLC 中文 Mod 模板 4.0"
+define config.name = "DDSB 心跳心跳煞笔部"
 
 # 该选项控制是否在游戏主菜单展示 Mod 名字及版本号。
 # 如果 Mod 名字太长，建议禁用此选项。
 define gui.show_name = True
 
 # 该选项代表模组的版本号。
-define config.version = "4.2.0–zh-py3-patch1"
+define config.version = "v0.0.1a"
 
 # 该选项代表 Mod 模板的版本号。**请勿修改**
 define template.version = "4.2.0–zh-py3-patch1"
 
 # 这里是在“关于”页显示的 Mod 介绍文字。
 # 您可以在这里写点 Mod 的简介，默认情况下它将出现在“额外功能”的“关于”界面。
-define gui.about = _("")
+define gui.about = _("开发中...")
 
 # This control the name of your mod build when you package your mod
 # in the Ren'Py Launcher or DDMM (Doki Doki Mod Maker).
