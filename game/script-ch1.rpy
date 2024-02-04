@@ -22,7 +22,6 @@ label ch1_start:
     "本来是打算七点就去上学的，但最近的上学时间却总是被她睡懒觉的时间所耽误。"
     "真是麻烦啊……"
     "但我还是停了下来……"
-    #$ s_name = '福'
     show sayori 4p zorder 2 at t11
     s "哈...哈..."
     mc "你再睡下去我们就该迟到了。"
@@ -38,16 +37,6 @@ label ch1_start:
     s "嗯……"
     mc "？？？"
     s "……"
-
-    #show sayori 1 zorder 2 at h11
-    #s "欢天"
-    #show sayori 1 zorder 2 at h11
-    #s "喜地"
-    #show sayori 1 zorder 2 at h11
-    #s "过"
-    #show sayori 1 zorder 2 at h11
-    #s "大年！"
-
     mc "有话快说。"
     s "嘤嘤嘤"
     s "我说出来你别打我哈。"
