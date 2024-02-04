@@ -22,10 +22,10 @@ label start:
     # 如需添加新角色，请参考下方代码示例：
     #   $ mi_name = "Mike"
     # 不要忘记在 definitions.rpy 添加相应角色！
-    $ s_name = "???"
-    $ m_name = "女孩 3"
-    $ n_name = "女孩 2"
-    $ y_name = "女孩 1"
+    $ s_name = "Sayori"
+    $ m_name = "Monika"
+    $ n_name = "Natsuki"
+    $ y_name = "Yuri"
 
     # 该变量控制文本框展示时是否显示底部文字菜单，以及是否允许使用 Esc 显示菜单。
     $ quick_menu = True
@@ -47,7 +47,9 @@ label start:
     # 'persistent.playthrough' controls the playthrough number the player is on i.e (Act 1, 2, 3, 4)
     
     # 当你写好故事脚本文件后，再删除下面这一行，然后在此调用（call）您的脚本
-    call screen dialog(message="您似乎在尝试直接将 Mod 模板作为无故事剧情的新游戏运行。\n这是一个模组模板，而不是一个实际的模组。请为您的模组编写故事，并在“script.rpy”中调用（call）脚本后重试。", ok_action=MainMenu(confirm=False))
+    # call screen dialog(message="您似乎在尝试直接将 Mod 模板作为无故事剧情的新游戏运行。\n这是一个模组模板，而不是一个实际的模组。请为您的模组编写故事，并在“script.rpy”中调用（call）脚本后重试。", ok_action=MainMenu(confirm=False))
+
+    call ch1_start
 
     ## 下方是原版 DDLC 游戏的 call 语句示例。
     # if persistent.playthrough == 0:
